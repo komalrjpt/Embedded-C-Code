@@ -1,0 +1,23 @@
+//Program: XOR of all numbers from 1 to N
+
+#include <stdio.h>
+
+// Function to compute XOR from 1 to n in O(1) time
+int findXORuptoN(int n)
+{
+    switch(n % 4) {
+        case 0: return n;       // Pattern:  n
+        case 1: return 1;       // Pattern:  1
+        case 2: return n + 1;   // Pattern:  n + 1
+        case 3: return 0;       // Pattern:  0
+    }
+    return 0; // To avoid compiler warning
+}
+
+int main()
+{
+    int n = 9870;
+    int xorupton = findXORuptoN(n);
+    printf("XOR of all numbers up to %d is %d\n", n, xorupton);
+    return 0;
+}
