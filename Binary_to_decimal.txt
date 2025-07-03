@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include<stdint.h>
+void dectobinary(uint32_t n)
+{
+    int i,bin;
+for(i=31;i>=0;i--)    
+  {  bin = (n>>i)&1;
+    printf("%d",bin);
+}}
+int main()
+{   uint32_t n;
+    printf("print no:");
+    scanf("%u",&n);
+    dectobinary(n);
+    return 0;
+}
