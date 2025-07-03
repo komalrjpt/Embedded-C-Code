@@ -1,0 +1,43 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include<stdint.h>
+
+void extractpositionbits(uint32_t n)
+{   uint32_t k; uint32_t l=0;
+    int i,j=31,bin;
+  
+while(l<2)
+{switch (l)
+{
+case (0):
+for(i=31;i>=0;i--) 
+     {   bin=((n>>i)&1);
+          printf("%u",bin);
+         }
+printf("\n");         
+break;
+case (1):         
+for(i=0;i<=31;i++)
+{
+    bin=((n>>i)&1);
+    printf("%u",bin) ;
+    
+}
+break;
+    
+}
+l++;
+}       
+}
+int main()
+{   uint32_t n=5;
+    extractpositionbits(n);
+    return 0;
+}
