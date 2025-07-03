@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include<stdint.h>
+void countsetbits(uint32_t n)
+{
+    int i,bin,count;
+for(i=31;i>=0;i--)    
+  {  bin = (n>>i)&1;
+     if (bin)
+     count++;
+   }
+    printf("%d",count);
+}
+int main()
+{   uint32_t n;
+    printf("print no:");
+    scanf("%u",&n);
+    countsetbits(n);
+    return 0;
+}
